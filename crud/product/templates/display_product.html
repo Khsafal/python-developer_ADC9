@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Product</title>
+    <style>
+        body{
+            color: brown;
+            background-image: url('1.jpg');
+        }
+
+        h1{
+            color: rgb(231, 185, 36);
+        }
+
+        span{
+            font-weight: 800;
+            color: rgb(14, 25, 36);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>  Our Product  </h1><br>
+  
+  {% for product in products %}
+<span>Product Name=</span> {{product.product_name}}<br>
+ <span> Product Code=</span> e-{{product.product_code}} <br>
+  <span>Product Price= </span> ${{product.product_price}}<br>
+  <a href="edit/{{product.id}}">Edit this</a> <br>
+  <a href="delete/{{ product.id }}">Delete</a> <br>
+  ==================================================================<br>
+  {% empty %}
+        There are no Products.
+    {% endfor %}
+</body>
+
+</body>
+</html>

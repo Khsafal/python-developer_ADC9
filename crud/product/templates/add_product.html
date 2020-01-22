@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product</title>
+</head>
+<body>
+   <h1>Add Product</h1> 
+   <form action="save" method="POST">
+        {% csrf_token %}
+Product Name: <input type="text" name=product_name><br>
+Product Code: <input type="text" name=product_code><br>
+Product Price: <input type="number" name=product_price><br>
+<input type="submit" value="Add">
+   </form>
+</body>
+</html>
